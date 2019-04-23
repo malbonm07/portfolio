@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+/* ######################### VARIABLES ######################### */
+/* ######################### END VARIABLES ######################### */
+/* ######################### BASE ######################### */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato";
+  color: #333; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  width: 100%; }
+
+h1 {
+  font-size: 96px; }
+
+h2 {
+  font-size: 60px; }
+
+h3 {
+  font-size: 48px; }
+
+h4 {
+  font-size: 34px; }
+
+h5 {
+  font-size: 24px; }
+
+h6 {
+  font-size: 20px; }
+
+/* ######################### END BASE ######################### */
+/* ######################### NAVBAR ######################### */
+.navbar {
+  position: sticky;
+  width: 100%;
+  height: 60px;
+  background: #000; }
+
+/* ######################### END NAVBAR ######################### */
