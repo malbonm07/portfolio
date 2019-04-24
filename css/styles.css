@@ -88,10 +88,14 @@ h6 {
   justify-content: center;
   color: #fff; }
 
+.banner-effect {
+  width: 100%; }
+
 .banner-content {
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
-  padding: 0 2em; }
+  padding: 0 2em;
+  position: relative; }
   .banner-content__email {
     color: #4d4d4d;
     font-family: "Charm"; }
@@ -103,15 +107,25 @@ h6 {
   position: relative;
   animation-name: appear-relay;
   animation-duration: 1s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation-timing-function: linear;
   overflow: hidden; }
+
+.banner-content__title {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 2s; }
+
+.banner-content__email {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 2s; }
 
 .banner-content-list {
   list-style: none;
   opacity: 0;
   animation: appear-text 0.0001s linear forwards;
-  animation-delay: 2s;
+  animation-delay: 3s;
   display: flex; }
   .banner-content-list li {
     line-height: 3em;
@@ -165,7 +179,7 @@ h6 {
   right: 20px;
   animation-name: fadeInLeft;
   animation-duration: 1s;
-  animation-delay: 3s;
+  animation-delay: 4s;
   opacity: 0;
   animation-fill-mode: forwards; }
   .year h6 {
@@ -179,6 +193,17 @@ h6 {
   width: 0%;
   height: 100%;
   background: #000;
+  position: absolute;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 2.4s; }
+
+.banner-effect:after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: black;
   position: absolute;
   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
   animation-delay: 1.4s; }
