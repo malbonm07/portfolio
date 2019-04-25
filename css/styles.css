@@ -116,8 +116,9 @@ h6 {
 .banner-content {
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
-  padding: 0 2em;
-  position: relative; }
+  position: relative;
+  padding: 0 3rem;
+  overflow: hidden; }
   .banner-content__email {
     color: #4d4d4d;
     font-family: "Charm"; }
@@ -296,3 +297,43 @@ h6 {
 
 /* ################## end animation ################## */
 /* ######################### END HERO ######################### */
+/* ######################### SKILLS ######################### */
+.skills-section {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  background: black; }
+  .skills-section h3 {
+    width: 90vw; }
+
+.skills-title {
+  width: 90vw; }
+  .skills-title h2 {
+    padding: 50px 0; }
+
+.skills-center {
+  width: 90vw;
+  padding: 25px 0; }
+  .skills-center .skills-list {
+    list-style: none;
+    display: flex; }
+    .skills-center .skills-list li {
+      line-height: 3em;
+      width: 50px;
+      margin: 0 10px 0 0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .skills-center .skills-list li span {
+        font-size: 1.4rem;
+        color: white;
+        width: 100%;
+        background: transparent;
+        text-align: center;
+        border-radius: 50%; }
+
+.workflow-list {
+  width: 90vw; }
+
+/* ######################### END SKILLS ######################### */
