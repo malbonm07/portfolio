@@ -302,38 +302,73 @@ h6 {
   width: 100%;
   display: grid;
   justify-content: center;
-  background: black; }
+  background: black;
+  color: #666666; }
   .skills-section h3 {
     width: 90vw; }
 
 .skills-title {
   width: 90vw; }
   .skills-title h2 {
-    padding: 50px 0; }
+    padding: 4rem 0 10px 0; }
 
 .skills-center {
   width: 90vw;
-  padding: 25px 0; }
+  padding: 4rem 0; }
   .skills-center .skills-list {
     list-style: none;
     display: flex; }
     .skills-center .skills-list li {
       line-height: 3em;
-      width: 50px;
+      width: 100px;
       margin: 0 10px 0 0;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center; }
       .skills-center .skills-list li span {
-        font-size: 1.4rem;
+        font-size: 3.4rem;
         color: white;
         width: 100%;
         background: transparent;
         text-align: center;
-        border-radius: 50%; }
+        border-radius: 50%;
+        color: white;
+        transition: .3s; }
 
+/* ######################### color-icons ######################### */
+.fa-html5:hover {
+  color: #DE4A24; }
+
+.fa-css3-alt:hover {
+  color: #1A70B4; }
+
+.fa-js-square:hover {
+  color: #F0D81F; }
+
+.fa-vuejs:hover {
+  color: #3FB37F; }
+
+.fa-bootstrap:hover {
+  color: #69419C; }
+
+.fa-sass:hover {
+  color: #C66495; }
+
+.fa-th:hover {
+  color: white; }
+
+.fa-npm:hover {
+  color: #C53634; }
+
+.fa-github:hover {
+  color: white; }
+
+/* ######################### end color icons ######################### */
 .workflow-list {
-  width: 90vw; }
+  width: 90vw;
+  padding: 4rem 0; }
+  .workflow-list li {
+    line-height: 3rem; }
 
 /* ######################### END SKILLS ######################### */
