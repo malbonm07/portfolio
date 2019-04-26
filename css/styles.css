@@ -78,7 +78,7 @@ h6 {
     .navbar-center {
       padding: 0 2em; } }
   .navbar-center a {
-    color: #404040;
+    color: #595959;
     font-size: 16px; }
   .navbar-center .navbar-list {
     display: flex;
@@ -337,7 +337,8 @@ h6 {
     text-align: center; }
     .skills-center .skills-list li {
       width: 100px;
-      margin: auto; }
+      margin: auto;
+      position: relative; }
       .skills-center .skills-list li span {
         font-size: 3.4rem;
         color: white;
@@ -347,6 +348,16 @@ h6 {
         border-radius: 50%;
         color: white;
         transition: .3s; }
+      .skills-center .skills-list li span:hover .skill-item__popover {
+        opacity: 1; }
+      .skills-center .skills-list li .skill-item__popover {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        font-size: 12px;
+        letter-spacing: 1px;
+        opacity: 0;
+        transition: 0.2s; }
 
 /* ######################### color-icons:hover ######################### */
 .fa-html5:hover {
