@@ -23,22 +23,22 @@ img {
   width: 100%; }
 
 h1 {
-  font-size: 96px; }
+  font-size: 56px; }
 
 h2 {
-  font-size: 60px; }
+  font-size: 40px; }
 
 h3 {
-  font-size: 48px; }
+  font-size: 28px; }
 
 h4 {
-  font-size: 34px; }
-
-h5 {
   font-size: 24px; }
 
+h5 {
+  font-size: 14px; }
+
 h6 {
-  font-size: 20px; }
+  font-size: 10px; }
 
 /* ######################### END BASE ######################### */
 /* ######################### NAVBAR ######################### */
@@ -65,6 +65,7 @@ h6 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 1em;
   opacity: 0;
   animation-name: fadeInDown;
@@ -73,13 +74,17 @@ h6 {
   animation-delay: 4s;
   position: absolute;
   z-index: 5; }
-  .navbar-center h6 {
-    color: #404040; }
+  @media screen and (min-width: 1000px) {
+    .navbar-center {
+      padding: 0 2em; } }
+  .navbar-center a {
+    color: #404040;
+    font-size: 16px; }
   .navbar-center .navbar-list {
     display: flex;
     justify-content: flex-end; }
     .navbar-center .navbar-list li {
-      margin-left: 1.3rem; }
+      margin-left: 1rem; }
     .navbar-center .navbar-list__link {
       color: #fff;
       font-size: 14px; }
@@ -117,8 +122,10 @@ h6 {
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
   position: relative;
-  padding: 0 3rem;
-  overflow: hidden; }
+  padding: 0 1rem; }
+  @media screen and (min-width: 1000px) {
+    .banner-content {
+      padding: 0 3rem; } }
   .banner-content__email {
     color: #4d4d4d;
     font-family: "Charm"; }
@@ -128,17 +135,23 @@ h6 {
   animation: appear-text 0.0001s linear forwards;
   animation-delay: 2s;
   letter-spacing: 5px; }
+  @media screen and (min-width: 1000px) {
+    .banner-content__title {
+      font-size: 96px; } }
 
 .banner-content__email {
   opacity: 0;
   animation: appear-text 0.0001s linear forwards;
   animation-delay: 2s;
-  padding-left: 20px; }
+  padding-left: 10px; }
+  @media screen and (min-width: 1000px) {
+    .banner-content__email {
+      font-size: 34px; } }
 
 /* ######################### social-content ######################### */
 .social-content {
   width: auto;
-  padding: 20px;
+  padding: 10px;
   background: rgba(0, 0, 0, 0.2);
   position: relative;
   animation-name: appear-relay;
@@ -164,7 +177,7 @@ h6 {
     position: relative;
     z-index: 10; }
     .banner-content-list li a {
-      font-size: 1.4rem;
+      font-size: 1rem;
       color: #cccccc;
       width: 100%;
       background: #1a1a1a;
@@ -299,6 +312,7 @@ h6 {
 /* ######################### END HERO ######################### */
 /* ######################### SKILLS ######################### */
 .skills-section {
+  border-top: 1px solid #333;
   width: 100%;
   display: grid;
   justify-content: center;
@@ -310,22 +324,20 @@ h6 {
 .skills-title {
   width: 90vw; }
   .skills-title h2 {
-    padding: 4rem 0 10px 0; }
+    padding: 2rem 0 10px 0; }
 
 .skills-center {
   width: 90vw;
-  padding: 4rem 0; }
+  padding: 2rem 0; }
   .skills-center .skills-list {
     list-style: none;
-    display: flex; }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1rem;
+    text-align: center; }
     .skills-center .skills-list li {
-      line-height: 3em;
       width: 100px;
-      margin: 0 10px 0 0;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      margin: auto; }
       .skills-center .skills-list li span {
         font-size: 3.4rem;
         color: white;
@@ -336,7 +348,7 @@ h6 {
         color: white;
         transition: .3s; }
 
-/* ######################### color-icons ######################### */
+/* ######################### color-icons:hover ######################### */
 .fa-html5:hover {
   color: #DE4A24; }
 
@@ -364,11 +376,83 @@ h6 {
 .fa-github:hover {
   color: white; }
 
-/* ######################### end color icons ######################### */
+/* ######################### end color icons:hover ######################### */
 .workflow-list {
   width: 90vw;
-  padding: 4rem 0; }
+  padding: 2rem 0; }
   .workflow-list li {
-    line-height: 3rem; }
+    line-height: 2rem; }
 
 /* ######################### END SKILLS ######################### */
+/* ######################### PORTFOLIO ######################### */
+.projects {
+  border-top: 1px solid #333;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #666666;
+  background: #04080b; }
+
+.projects-title {
+  width: 90vw; }
+  .projects-title h2 {
+    padding: 2rem 0; }
+
+.projects-center {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+  padding-bottom: 4rem; }
+
+.project {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 2px;
+  position: relative; }
+  .project h4 {
+    padding: 1rem 2rem;
+    color: #fff; }
+  .project ul {
+    padding-bottom: 1rem; }
+  .project ul li {
+    padding: 0 3rem;
+    line-height: 1.4rem;
+    font-size: 14px;
+    color: #fff;
+    position: relative; }
+  .project ul li:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: black;
+    left: 33px;
+    top: calc(50% - 2.5px);
+    transform: rotate(50deg);
+    border: 1px solid #00ff00; }
+
+.project-img-container {
+  position: relative; }
+
+.project-img-container:hover .project-img-overlay {
+  opacity: 1; }
+
+.project-img {
+  position: relative; }
+
+.project-img-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 100px;
+  text-align: center; }
+
+/* ######################### PORTFOLIO ######################### */
