@@ -4,8 +4,6 @@ function appearSkillList() {
   let buttonHome = document.querySelector('.buttonHome')
   let introSkillsPositionList = skillsList.getBoundingClientRect().top;
   let screenPosition = window.innerHeight/1.23;
-    // console.log(screenPosition)
-    // console.log(introPositionList)
 
   if(introSkillsPositionList < screenPosition) {
     skillsList.classList.add('skills-appear')
@@ -13,6 +11,7 @@ function appearSkillList() {
   }else if(introSkillsPositionList > screenPosition) {
     skillsList.classList.remove('skills-appear')
     buttonHome.classList.remove('buttonHome-effect')
+
   }
 }
 
@@ -20,17 +19,25 @@ function appearProjectsList() {
   let projectsList = document.querySelector('.projects-center');
   let introProjectsPositionList = projectsList.getBoundingClientRect().top;
   let screenPosition = window.innerHeight/1.23;
-    // console.log(screenPosition)
-    // console.log(introPositionList)
 
   if(introProjectsPositionList < screenPosition) {
     projectsList.classList.add('projects-appear')
-    console.log("hecho")
+
   }else if(introProjectsPositionList > screenPosition) {
     projectsList.classList.remove('projects-appear')
-    console.log("removed")
+
   }
 }
+
+let educationButton = document.querySelector('.education-button')
+let educationBox = document.querySelector('.education-box')
+
+educationButton.addEventListener('click', function() {
+  educationBox.classList.toggle('appear-education-box')
+})
+
+
+// ################### SIDE-BAR-EFFECT ###################
 
 let sideBarButton = document.querySelector('.navbar-hamburguer__logo')
 let sideBarAppear = document.querySelector('.side-bar')
@@ -44,12 +51,39 @@ mainContainer.addEventListener('click', function() {
   sideBarAppear.classList.remove('appear-sidebar')
 })
 
+// ################### SIDE-BAR-SUBMENU-EFFECT ###################
+
 let siderSubMenuButton = document.querySelector('.sider-bar__submenuButton');
 let siderBarSubMenu = document.querySelector('.sider-bar_submenu-list');
+let siderSubMenuButton2 = document.querySelector('.sider-bar__submenuButton2');
+let siderBarSubMenu2 = document.querySelector('.sider-bar_submenu-list2');
 
 siderSubMenuButton.addEventListener('click', function() {
   siderBarSubMenu.classList.toggle('sider-bar__submenu-effect')
 })
+siderSubMenuButton2.addEventListener('click', function() {
+  siderBarSubMenu2.classList.toggle('sider-bar__submenu-effect2')
+})
+
+// ################### END SIDE-BAR-SUBMENU-EFFECT ###################
+// ################### END SIDE-BAR-EFFECT ###################
+
+// ################### NAVBAR-SCROLL-EFFECT ###################
+
+let prevScroll = window.pageYOffset;
+let navbar = document.querySelector('.navbar');
+window.onscroll = function() {
+  let currentScroll = window.pageYOffset;
+  if(prevScroll > currentScroll) {
+    navbar.style.top = "0";
+  }else {
+    navbar.style.top = "-70px"
+  }
+
+  prevScroll = currentScroll;
+}
+
+// ################### END NAVBAR-SCROLL-EFFECT ###################
 
 window.addEventListener('scroll', appearSkillList)
 window.addEventListener('scroll', appearProjectsList)

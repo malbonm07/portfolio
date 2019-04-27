@@ -43,15 +43,16 @@ h6 {
 /* ######################### END BASE ######################### */
 /* ######################### NAVBAR ######################### */
 .navbar {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 0px;
   width: 100%;
   height: 60px;
-  background: rgba(0, 0, 0, 0.85);
+  background: transparent;
   display: flex;
   align-items: center;
-  z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+  z-index: 99;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
 
 .navbar-content-effect {
   width: 100%;
@@ -71,7 +72,7 @@ h6 {
   animation-name: fadeInDown;
   animation-fill-mode: forwards;
   animation-duration: .8s;
-  animation-delay: 4s;
+  animation-delay: 1.9s;
   position: absolute;
   z-index: 5; }
   @media screen and (min-width: 1000px) {
@@ -82,9 +83,11 @@ h6 {
     cursor: pointer;
     padding: 10px; }
   .navbar-center .navbar-hamburguer__logo {
-    color: #595959;
+    color: #999999;
     font-size: 22px;
     padding-left: 25px; }
+    .navbar-center .navbar-hamburguer__logo span {
+      color: #ffffff; }
     @media screen and (max-width: 320px) {
       .navbar-center .navbar-hamburguer__logo {
         font-size: 16px; } }
@@ -162,11 +165,11 @@ h6 {
   overflow-y: auto;
   padding: 72px 0 40px;
   position: fixed;
-  top: 60px;
+  top: 0px;
   transform: translateX(-100%);
   transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   width: 280px;
-  z-index: 99; }
+  z-index: 1; }
   .side-bar .side-img-box {
     width: 150px;
     margin: 0 auto;
@@ -187,6 +190,7 @@ h6 {
       padding: 10px 0;
       overflow: hidden;
       color: black;
+      letter-spacing: 1px;
       font-weight: bold; }
       .side-bar .side-bar__menu .side-bar__item .side-bar__link  {
         position: relative;
@@ -202,8 +206,8 @@ h6 {
         position: absolute;
         transition: 1s;
         padding-top: 20px;
-        padding-left: 55px;
-        width: 60%;
+        padding-left: 63px;
+        width: 70%;
         margin: auto;
         text-align: left; }
         .side-bar .side-bar__menu .sider-bar__submenu .sider-bar_submenu-list li {
@@ -229,10 +233,72 @@ h6 {
       .side-bar .side-bar__menu .sider-bar__submenu .sider-bar__submenu-effect {
         position: relative;
         transform: translateY(0px); }
+    .side-bar .side-bar__menu .sider-bar__submenu2 {
+      width: 100%;
+      transition: 1s; }
+      .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar_submenu-list2 {
+        position: absolute;
+        transition: 1s;
+        padding-top: 20px;
+        padding-left: 63px;
+        width: 70%;
+        margin: auto;
+        text-align: left; }
+        .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar_submenu-list2 li {
+          display: block;
+          position: relative; }
+          .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar_submenu-list2 li a {
+            display: block;
+            line-height: 30px; }
+        .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar_submenu-list2 li:after {
+          content: "";
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background: transparent;
+          left: -12px;
+          top: 12px;
+          background: #00e600;
+          border-radius: 50%;
+          border: 1px solid #333; }
+      .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar__submenu-effect2 {
+        position: relative;
+        transform: translateY(0px); }
+  .side-bar .education-box {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 30px auto;
+    grid-gap: 6px;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    transform: translateY(70px);
+    animation: 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0; }
+    .side-bar .education-box .education-box__item {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%; }
+      .side-bar .education-box .education-box__item img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15%; }
+      .side-bar .education-box .education-box__item .fa-youtube {
+        font-size: 2.5rem;
+        color: red; }
+  .side-bar .appear-education-box {
+    animation-name: fadeInUp; }
 
 .appear-sidebar {
   transform: translateX(0%);
-  z-index: 99; }
+  z-index: 20; }
 
 .appear-sidebar:after {
   content: "";
@@ -245,7 +311,7 @@ h6 {
 /* ######################### END SIDE-BAR ######################### */
 /* ######################### HERO ######################### */
 .hero {
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
   background: url("https://images.pexels.com/photos/1201624/pexels-photo-1201624.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center;
   background-repeat: no-repeat;
@@ -267,6 +333,8 @@ h6 {
 
 .banner-effect {
   width: 100%; }
+  .banner-effect h4 {
+    padding: 10px 0; }
 
 .banner-content {
   width: 100%;
@@ -283,7 +351,7 @@ h6 {
 .banner-content__title {
   opacity: 0;
   animation: appear-text 0.0001s linear forwards;
-  animation-delay: 2s;
+  animation-delay: 1.1s;
   letter-spacing: 5px; }
   @media screen and (min-width: 1000px) {
     .banner-content__title {
@@ -292,9 +360,8 @@ h6 {
 .banner-content__email {
   opacity: 0;
   animation: appear-text 0.0001s linear forwards;
-  animation-delay: 2s;
-  padding-left: 10px;
-  padding: 20px 0; }
+  animation-delay: 1.1s;
+  padding-left: 10px; }
   @media screen and (min-width: 1000px) {
     .banner-content__email {
       font-size: 34px; } }
@@ -307,7 +374,7 @@ h6 {
   position: relative;
   animation-name: appear-relay;
   animation-duration: 1s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-timing-function: linear;
   overflow: hidden; }
 
@@ -315,7 +382,7 @@ h6 {
   list-style: none;
   opacity: 0;
   animation: appear-text 0.0001s linear forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
   display: flex; }
   .banner-content-list li {
     line-height: 3em;
@@ -346,8 +413,8 @@ h6 {
   bottom: 10px;
   right: 20px;
   animation-name: fadeInLeft;
-  animation-duration: 1s;
-  animation-delay: 4s;
+  animation-duration: 1.7s;
+  animation-delay: 2s;
   opacity: 0;
   animation-fill-mode: forwards;
   border-left: 1px solid #333;
@@ -409,7 +476,7 @@ h6 {
   background: #000;
   position: absolute;
   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-  animation-delay: 2.4s; }
+  animation-delay: 1.4s; }
 
 .banner-effect:after {
   content: "";
@@ -420,7 +487,7 @@ h6 {
   background: black;
   position: absolute;
   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-  animation-delay: 1.4s; }
+  animation-delay: 0.5s; }
 
 .navbar-content-effect:after {
   content: "";
@@ -431,7 +498,7 @@ h6 {
   background: #000;
   position: absolute;
   animation: rev-block-nav 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-  animation-delay: 3.2s; }
+  animation-delay: 1.3s; }
 
 @keyframes rev-block {
   0% {
@@ -479,6 +546,14 @@ h6 {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px); }
+  to {
+    opacity: 1;
+    transform: translateY(0px); } }
 
 /* ################## end animation ################## */
 /* ######################### END HERO ######################### */
@@ -716,7 +791,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
   padding-bottom: 20px; }
   .footer-social-list li {
     line-height: 3em;
@@ -727,7 +802,7 @@ h6 {
     align-items: center; }
     .footer-social-list li a {
       font-size: 1.2rem;
-      color: #cccccc;
+      color: #b3b3b3;
       width: 100%;
       background: transparent;
       text-align: center; }
@@ -736,6 +811,23 @@ h6 {
 
 .footer-description {
   padding-bottom: 2rem; }
+  .footer-description .footer-home-button {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    display: none; }
+    .footer-description .footer-home-button a {
+      color: #333;
+      background: #ffffff;
+      padding: 5px 10px;
+      border-radius: 50%;
+      transition: .3s; }
+    .footer-description .footer-home-button a:hover {
+      color: #ffffff;
+      background: #333; }
+    @media screen and (max-width: 375px) {
+      .footer-description .footer-home-button {
+        display: block; } }
   .footer-description .footer-description-box {
     text-align: center;
     padding: 12.6px 0; }
