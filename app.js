@@ -1,6 +1,7 @@
 
 function appearSkillList() {
   let skillsList = document.querySelector('.skills-list');
+  let buttonHome = document.querySelector('.buttonHome')
   let introSkillsPositionList = skillsList.getBoundingClientRect().top;
   let screenPosition = window.innerHeight/1.23;
     // console.log(screenPosition)
@@ -8,8 +9,10 @@ function appearSkillList() {
 
   if(introSkillsPositionList < screenPosition) {
     skillsList.classList.add('skills-appear')
+    buttonHome.classList.add('buttonHome-effect')
   }else if(introSkillsPositionList > screenPosition) {
     skillsList.classList.remove('skills-appear')
+    buttonHome.classList.remove('buttonHome-effect')
   }
 }
 
