@@ -44,6 +44,13 @@ mainContainer.addEventListener('click', function() {
   sideBarAppear.classList.remove('appear-sidebar')
 })
 
+let siderSubMenuButton = document.querySelector('.sider-bar__submenuButton');
+let siderBarSubMenu = document.querySelector('.sider-bar_submenu-list');
+
+siderSubMenuButton.addEventListener('click', function() {
+  siderBarSubMenu.classList.toggle('sider-bar__submenu-effect')
+})
+
 window.addEventListener('scroll', appearSkillList)
 window.addEventListener('scroll', appearProjectsList)
 
