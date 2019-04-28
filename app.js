@@ -29,12 +29,12 @@ function appearProjectsList() {
   }
 }
 
-let educationButton = document.querySelector('.education-button')
-let educationBox = document.querySelector('.education-box')
-
-educationButton.addEventListener('click', function() {
-  educationBox.classList.toggle('appear-education-box')
-})
+// let educationButton = document.querySelector('.education-button')
+// let educationBox = document.querySelector('.education-box')
+//
+// educationButton.addEventListener('click', function() {
+//   educationBox.classList.toggle('appear-education-box')
+// })
 
 
 // ################### SIDE-BAR-EFFECT ###################
@@ -57,12 +57,17 @@ let siderSubMenuButton = document.querySelector('.sider-bar__submenuButton');
 let siderBarSubMenu = document.querySelector('.sider-bar_submenu-list');
 let siderSubMenuButton2 = document.querySelector('.sider-bar__submenuButton2');
 let siderBarSubMenu2 = document.querySelector('.sider-bar_submenu-list2');
+let siderSubMenuButton3 = document.querySelector('.sider-bar__submenuButton3');
+let siderBarSubMenu3 = document.querySelector('.sider-bar_submenu-list3');
 
 siderSubMenuButton.addEventListener('click', function() {
   siderBarSubMenu.classList.toggle('sider-bar__submenu-effect')
 })
 siderSubMenuButton2.addEventListener('click', function() {
   siderBarSubMenu2.classList.toggle('sider-bar__submenu-effect2')
+})
+siderSubMenuButton3.addEventListener('click', function() {
+  siderBarSubMenu3.classList.toggle('sider-bar__submenu-effect3')
 })
 
 // ################### END SIDE-BAR-SUBMENU-EFFECT ###################
@@ -75,6 +80,8 @@ let navbar = document.querySelector('.navbar');
 window.onscroll = function() {
   let currentScroll = window.pageYOffset;
   if(prevScroll > currentScroll) {
+    navbar.style.top = "0";
+  }else if(currentScroll === 0) {
     navbar.style.top = "0";
   }else {
     navbar.style.top = "-70px"
