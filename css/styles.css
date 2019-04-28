@@ -170,6 +170,10 @@ h6 {
   transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   width: 280px;
   z-index: 1; }
+  @media screen and (min-width: 1300px) {
+    .side-bar {
+      transform: translateX(0%);
+      opacity: 1; } }
   .side-bar .side-img-box {
     width: 150px;
     margin: 0 auto;
@@ -201,13 +205,15 @@ h6 {
       background: rgba(0, 0, 0, 0.05); }
     .side-bar .side-bar__menu .sider-bar__submenu {
       width: 100%;
-      transition: 1s; }
+      transition: 1s;
+      overflow: hidden; }
       .side-bar .side-bar__menu .sider-bar__submenu .sider-bar_submenu-list {
         position: absolute;
         transition: 1s;
         padding-top: 20px;
         padding-left: 63px;
         width: 70%;
+        height: auto;
         margin: auto;
         text-align: left; }
         .side-bar .side-bar__menu .sider-bar__submenu .sider-bar_submenu-list li {
@@ -231,8 +237,7 @@ h6 {
           background: #ff9900;
           border: 1px solid #333; }
       .side-bar .side-bar__menu .sider-bar__submenu .sider-bar__submenu-effect {
-        position: relative;
-        transform: translateY(0px); }
+        position: relative; }
     .side-bar .side-bar__menu .sider-bar__submenu2 {
       width: 100%;
       transition: 1s; }
@@ -309,6 +314,10 @@ h6 {
   background: rgba(0, 0, 0, 0.9); }
 
 /* ######################### END SIDE-BAR ######################### */
+@media screen and (min-width: 1300px) {
+  .main-container {
+    margin-left: 280px; } }
+
 /* ######################### HERO ######################### */
 .hero {
   min-height: 100vh;
@@ -547,6 +556,14 @@ h6 {
     opacity: 1;
     transform: translate3d(0, 0, 0); } }
 
+@keyframes fadeInDownSubmenu {
+  from {
+    opacity: 0;
+    transform: translateY(-130px); }
+  to {
+    opacity: 1;
+    transform: translateY(0px); } }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -563,13 +580,26 @@ h6 {
   width: 100%;
   display: grid;
   justify-content: center;
+  align-items: center;
   background: black;
   color: #666666; }
+  @media screen and (min-width: 1200px) {
+    .skills-section {
+      display: block;
+      padding: 0 2rem; } }
   .skills-section h3 {
     width: 90vw; }
+    @media screen and (min-width: 1300px) {
+      .skills-section h3 {
+        width: 100%;
+        padding: 0 2rem; } }
 
 .skills-title {
   width: 90vw; }
+  @media screen and (min-width: 1300px) {
+    .skills-title {
+      width: 100%;
+      padding: 0 2rem; } }
   .skills-title h2 {
     padding: 2rem 0 10px 0;
     letter-spacing: 5px;
@@ -579,6 +609,10 @@ h6 {
 .skills-center {
   width: 90vw;
   padding: 2rem 0; }
+  @media screen and (min-width: 1200px) {
+    .skills-center {
+      width: 100%;
+      padding: 30px 2rem; } }
   .skills-center .skills-list {
     list-style: none;
     display: grid;
@@ -624,6 +658,10 @@ h6 {
 .workflow-list {
   width: 90vw;
   padding: 2rem 0; }
+  @media screen and (min-width: 1300px) {
+    .workflow-list {
+      width: 100%;
+      padding: 0 2rem 30px 2rem; } }
   .workflow-list li {
     line-height: 2rem;
     position: relative;
@@ -684,10 +722,16 @@ h6 {
 
 .projects-title {
   width: 90vw; }
+  @media screen and (min-width: 1300px) {
+    .projects-title {
+      width: 100%; } }
   .projects-title h2 {
     padding: 2rem 0;
     letter-spacing: 5px;
     color: #999999; }
+    @media screen and (min-width: 1300px) {
+      .projects-title h2 {
+        padding: 2rem 4rem; } }
 
 .projects-center {
   width: 90vw;
@@ -699,6 +743,10 @@ h6 {
   transform: translateY(20px);
   transition: 0.4s all ease-in-out;
   opacity: 0; }
+  @media screen and (min-width: 1300px) {
+    .projects-center {
+      width: 100%;
+      padding: 0 4rem 30px 4rem; } }
 
 /* ######################### project-card ######################### */
 .project {
@@ -765,8 +813,11 @@ h6 {
   opacity: 0;
   color: white;
   font-size: 20px;
-  padding: 110px;
+  padding: 95px;
   text-align: center; }
+  @media screen and (min-width: 1300px) {
+    .project-img-overlay {
+      padding: 80px; } }
 
 /* ######################### end project-card ######################### */
 /* ######################### END PORTFOLIO ######################### */
@@ -786,6 +837,10 @@ h6 {
 .footer-social {
   width: 90vw;
   margin: 0 auto; }
+  @media screen and (min-width: 1300px) {
+    .footer-social {
+      width: 100%;
+      padding: 0 2rem; } }
 
 .footer-social-list {
   display: flex;
