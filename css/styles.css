@@ -218,7 +218,7 @@ h6 {
         max-height: 0px;
         text-align: left;
         padding-left: 13px;
-        transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
         margin: auto;
@@ -259,7 +259,7 @@ h6 {
         max-height: 0px;
         margin: auto;
         text-align: left;
-        transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent; }
         .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar_submenu-list2 li {
@@ -289,12 +289,12 @@ h6 {
     .side-bar .side-bar__menu .sider-bar__submenu3 {
       width: 100%; }
       .side-bar .side-bar__menu .sider-bar__submenu3 .sider-bar_submenu-list3 {
-        margin: auto;
+        margin: 0 auto;
         transform: translateY(5px);
         width: 70%;
         max-height: 0px;
         text-align: left;
-        transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent; }
         .side-bar .side-bar__menu .sider-bar__submenu3 .sider-bar_submenu-list3 li {
@@ -310,7 +310,7 @@ h6 {
         padding-top: 20px;
         padding-bottom: 20px;
         border-color: #cccccc;
-        margin-top: 20px; }
+        margin-top: 19px; }
   .side-bar .appear-education-box {
     animation-name: fadeInUp; }
 
@@ -645,12 +645,11 @@ h6 {
       position: relative; }
       .skills-center .skills-list li span {
         font-size: 3.4rem;
-        color: white;
+        color: #e6e6e6;
         width: 100%;
         background: transparent;
         text-align: center;
         border-radius: 50%;
-        color: white;
         transition: .3s; }
       .skills-center .skills-list li span:hover .skill-item__popover {
         opacity: 1; }
@@ -730,7 +729,7 @@ h6 {
   justify-content: center;
   align-items: center;
   color: #666666;
-  background: linear-gradient(0deg, #071d3c 0%, #030d18 50%); }
+  background: linear-gradient(0deg, #071d3c 0%, #030d18 80%); }
   .projects .projects-appear {
     opacity: 1;
     transform: translateY(0px); }
@@ -770,14 +769,14 @@ h6 {
   position: relative; }
   .project h4 {
     padding: 1rem 2rem;
-    color: #ffffff; }
+    color: #999999; }
   .project ul {
     padding-bottom: 1rem; }
   .project ul li {
     padding: 0 3rem;
     line-height: 1.4rem;
     font-size: 14px;
-    color: #ffffff;
+    color: #999999;
     position: relative; }
   .project ul li:after {
     content: "";
@@ -797,10 +796,10 @@ h6 {
     position: absolute;
     bottom: 10%;
     right: 5%;
-    z-index: 99;
+    z-index: 10;
     opacity: 0;
     transform: translateY(200%);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     .project-img-container .img-bang h6 {
       color: #e6e6e6;
       padding: 5px 10px;
@@ -810,10 +809,10 @@ h6 {
     position: absolute;
     bottom: 10%;
     left: 5%;
-    z-index: 99;
+    z-index: 10;
     opacity: 0;
     transform: translateY(200%);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -858,6 +857,28 @@ h6 {
   @media screen and (min-width: 1300px) {
     .project-img-overlay {
       padding: 80px; } }
+
+.project:hover .project-img-overlay::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  z-index: 80;
+  animation: rev-block-project 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards; }
+
+@keyframes rev-block-project {
+  0% {
+    left: 0%;
+    width: 0; }
+  50% {
+    left: 0%;
+    width: 100%; }
+  100% {
+    left: 100%;
+    width: 0%; } }
 
 /* ######################### end project-card ######################### */
 /* ######################### END PORTFOLIO ######################### */
