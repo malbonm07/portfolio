@@ -211,17 +211,17 @@ h6 {
       background: rgba(0, 0, 0, 0.05);
       border-color: #e6e6e6; }
     .side-bar .side-bar__menu .sider-bar__submenu {
-      width: 100%;
-      overflow: hidden; }
+      width: 100%; }
       .side-bar .side-bar__menu .sider-bar__submenu .sider-bar_submenu-list {
-        position: absolute;
-        transition: 1s;
-        padding-top: 20px;
-        padding-left: 13px;
+        transform: translateY(2.2px);
         width: 70%;
-        height: auto;
-        margin: auto;
-        text-align: left; }
+        max-height: 0px;
+        text-align: left;
+        padding-left: 13px;
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        margin: 5px auto 0 auto; }
         .side-bar .side-bar__menu .sider-bar__submenu .sider-bar_submenu-list li {
           display: block;
           position: relative; }
@@ -235,7 +235,7 @@ h6 {
           height: 5px;
           background: transparent;
           left: -12px;
-          top: 12px;
+          top: 11.5px;
           background: #00e600;
           border-radius: 50%;
           border: 1px solid #333; }
@@ -243,16 +243,23 @@ h6 {
           background: #ff9900;
           border: 1px solid #333; }
       .side-bar .side-bar__menu .sider-bar__submenu .sider-bar__submenu-effect {
-        position: relative; }
+        transform: translateY(0px);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-height: 300px;
+        border-color: #cccccc; }
     .side-bar .side-bar__menu .sider-bar__submenu2 {
       width: 100%; }
       .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar_submenu-list2 {
-        position: absolute;
-        padding-top: 20px;
         padding-left: 13px;
+        transform: translateY(2px);
         width: 70%;
-        margin: auto;
-        text-align: left; }
+        max-height: 0px;
+        margin: 5px auto 0 auto;
+        text-align: left;
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent; }
         .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar_submenu-list2 li {
           display: block;
           position: relative; }
@@ -266,23 +273,27 @@ h6 {
           height: 5px;
           background: transparent;
           left: -12px;
-          top: 12px;
+          top: 11px;
           background: #00e600;
           border-radius: 50%;
           border: 1px solid #333; }
       .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar__submenu-effect2 {
-        position: relative;
-        transform: translateY(0px); }
+        transform: translateY(0px);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-height: 600px;
+        border-color: #cccccc; }
     .side-bar .side-bar__menu .sider-bar__submenu3 {
       width: 100%; }
       .side-bar .side-bar__menu .sider-bar__submenu3 .sider-bar_submenu-list3 {
-        position: absolute;
-        transition: 1s;
-        padding-top: 20px;
-        padding-left: 0px;
+        margin: 5px auto 0 auto;
+        transform: translateY(5px);
         width: 70%;
-        margin: auto;
-        text-align: left; }
+        max-height: 0px;
+        text-align: left;
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent; }
         .side-bar .side-bar__menu .sider-bar__submenu3 .sider-bar_submenu-list3 li {
           display: block;
           position: relative; }
@@ -291,8 +302,11 @@ h6 {
             line-height: 30px;
             padding-left: 5px; }
       .side-bar .side-bar__menu .sider-bar__submenu3 .sider-bar__submenu-effect3 {
-        position: relative;
-        transform: translateY(0px); }
+        transform: translateY(0px);
+        max-height: 400px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-color: #cccccc; }
   .side-bar .appear-education-box {
     animation-name: fadeInUp; }
 
@@ -712,7 +726,7 @@ h6 {
   justify-content: center;
   align-items: center;
   color: #666666;
-  background: linear-gradient(0deg, #071d3c 0%, #030d18 30%); }
+  background: linear-gradient(0deg, #071d3c 0%, #030d18 50%); }
   .projects .projects-appear {
     opacity: 1;
     transform: translateY(0px); }
@@ -777,8 +791,8 @@ h6 {
   overflow: hidden; }
   .project-img-container .img-bang {
     position: absolute;
-    bottom: 30px;
-    right: 20px;
+    bottom: 10%;
+    right: 5%;
     z-index: 99;
     opacity: 0;
     transform: translateY(200%);
@@ -790,22 +804,31 @@ h6 {
       border-radius: 2px; }
   .project-img-container .img-see {
     position: absolute;
-    bottom: 30px;
-    right: 20px;
+    bottom: 10%;
+    left: 5%;
     z-index: 99;
     opacity: 0;
     transform: translateY(200%);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .project-img-container .img-see h6 {
       color: #e6e6e6;
-      padding: 5px 10px;
-      background: #1a1a1a;
-      border-radius: 2px; }
+      padding: 4px 9px;
+      background: transparent;
+      border-radius: 2px;
+      border: 0.5px solid #ffffff;
+      text-transform: capitalize; }
 
-.project-img-container:hover .project-img-overlay {
+.project:hover .project-img-overlay {
   opacity: 1; }
 
-.project-img-container:hover .img-bang {
+.project:hover .img-bang {
+  opacity: 1;
+  transform: translateY(0%); }
+
+.project:hover .img-see {
   opacity: 1;
   transform: translateY(0%); }
 
@@ -814,6 +837,7 @@ h6 {
 
 .project-img-overlay {
   position: absolute;
+  top: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   /* Black see-through */
@@ -823,7 +847,9 @@ h6 {
   opacity: 0;
   color: white;
   font-size: 20px;
-  padding: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center; }
   @media screen and (min-width: 1300px) {
     .project-img-overlay {
