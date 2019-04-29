@@ -218,10 +218,11 @@ h6 {
         max-height: 0px;
         text-align: left;
         padding-left: 13px;
-        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
-        margin: 5px auto 0 auto; }
+        margin: auto;
+        margin: 0 auto; }
         .side-bar .side-bar__menu .sider-bar__submenu .sider-bar_submenu-list li {
           display: block;
           position: relative; }
@@ -247,7 +248,8 @@ h6 {
         padding-top: 20px;
         padding-bottom: 20px;
         max-height: 300px;
-        border-color: #cccccc; }
+        border-color: #cccccc;
+        margin-top: 20px; }
     .side-bar .side-bar__menu .sider-bar__submenu2 {
       width: 100%; }
       .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar_submenu-list2 {
@@ -255,9 +257,9 @@ h6 {
         transform: translateY(2px);
         width: 70%;
         max-height: 0px;
-        margin: 5px auto 0 auto;
+        margin: auto;
         text-align: left;
-        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent; }
         .side-bar .side-bar__menu .sider-bar__submenu2 .sider-bar_submenu-list2 li {
@@ -282,16 +284,17 @@ h6 {
         padding-top: 20px;
         padding-bottom: 20px;
         max-height: 600px;
-        border-color: #cccccc; }
+        border-color: #cccccc;
+        margin-top: 20px; }
     .side-bar .side-bar__menu .sider-bar__submenu3 {
       width: 100%; }
       .side-bar .side-bar__menu .sider-bar__submenu3 .sider-bar_submenu-list3 {
-        margin: 5px auto 0 auto;
+        margin: auto;
         transform: translateY(5px);
         width: 70%;
         max-height: 0px;
         text-align: left;
-        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent; }
         .side-bar .side-bar__menu .sider-bar__submenu3 .sider-bar_submenu-list3 li {
@@ -306,7 +309,8 @@ h6 {
         max-height: 400px;
         padding-top: 20px;
         padding-bottom: 20px;
-        border-color: #cccccc; }
+        border-color: #cccccc;
+        margin-top: 20px; }
   .side-bar .appear-education-box {
     animation-name: fadeInUp; }
 
