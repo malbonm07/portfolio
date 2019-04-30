@@ -78,6 +78,9 @@ h6 {
   @media screen and (min-width: 1000px) {
     .navbar-center {
       padding: 0 2em; } }
+  @media screen and (min-width: 1300px) {
+    .navbar-center {
+      padding: 0 3.6em; } }
   .navbar-center .navbar-hamburguer {
     position: relative;
     cursor: pointer;
@@ -104,6 +107,9 @@ h6 {
     @media screen and (max-width: 320px) {
       .navbar-center .navbar-hamburguer__logo:before {
         top: 12.8px; } }
+    @media screen and (min-width: 1300px) {
+      .navbar-center .navbar-hamburguer__logo:before {
+        display: none; } }
   .navbar-center .buttonHome-box {
     display: none; }
     @media screen and (min-width: 500px) {
@@ -163,7 +169,7 @@ h6 {
   bottom: 0;
   font-size: 14px;
   overflow-y: auto;
-  padding: 0px 0 40px;
+  padding: 0px 0 30px;
   position: fixed;
   top: 0px;
   transform: translateX(-100%);
@@ -178,11 +184,11 @@ h6 {
     width: 100%;
     margin: 0 auto;
     padding: 72px 0 30px 0;
-    background: linear-gradient(0deg, white 42%, #282828 42%);
+    background: linear-gradient(0deg, white 42%, #030e17 42%);
     text-align: center; }
     .side-bar .side-img-box .side-img-contact {
-      border-radius: 70%;
-      border: 3px solid #ffffff;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
       width: 50%; }
   .side-bar .side-bar__menu {
     display: flex;
@@ -310,7 +316,7 @@ h6 {
         padding-top: 20px;
         padding-bottom: 20px;
         border-color: #cccccc;
-        margin-top: 19px; }
+        margin-top: 20px; }
   .side-bar .appear-education-box {
     animation-name: fadeInUp; }
 
@@ -389,6 +395,28 @@ h6 {
   @media screen and (min-width: 760px) {
     .banner-content__email {
       font-size: 34px; } }
+
+.banner-content-about {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 1.1s;
+  padding-left: 10px; }
+  @media screen and (min-width: 760px) {
+    .banner-content-about {
+      font-size: 24px; } }
+
+.about-me {
+  color: #999999; }
+  @media screen and (max-width: 850px) {
+    .about-me {
+      font-size: 56px; } }
+
+.about-description {
+  color: #4d4d4d;
+  margin-bottom: 20px; }
+  @media screen and (max-width: 850px) {
+    .about-description {
+      font-size: 12px; } }
 
 /* ######################### social-content ######################### */
 .social-content {
@@ -596,7 +624,7 @@ h6 {
   display: grid;
   justify-content: center;
   align-items: center;
-  background: black;
+  background: #030D17;
   color: #666666; }
   @media screen and (min-width: 1300px) {
     .skills-section {
@@ -685,8 +713,8 @@ h6 {
     width: 3.5px;
     height: 9px;
     position: absolute;
-    border-right: 3px solid #333;
-    border-bottom: 3px solid #333;
+    border-right: 3px solid #666666;
+    border-bottom: 3px solid #666666;
     top: 10px;
     left: 6px;
     transform: rotate(35deg); }
@@ -857,28 +885,6 @@ h6 {
   @media screen and (min-width: 1300px) {
     .project-img-overlay {
       padding: 80px; } }
-
-.project:hover .project-img-overlay::after {
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background: black;
-  position: absolute;
-  z-index: 80;
-  animation: rev-block-project 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards; }
-
-@keyframes rev-block-project {
-  0% {
-    left: 0%;
-    width: 0; }
-  50% {
-    left: 0%;
-    width: 100%; }
-  100% {
-    left: 100%;
-    width: 0%; } }
 
 /* ######################### end project-card ######################### */
 /* ######################### END PORTFOLIO ######################### */
