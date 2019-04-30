@@ -729,7 +729,7 @@ h6 {
   justify-content: center;
   align-items: center;
   color: #666666;
-  background: linear-gradient(0deg, #071d3c 0%, #030d18 80%); }
+  background: linear-gradient(0deg, #071d3c 0%, #030d18 90%); }
   .projects .projects-appear {
     opacity: 1;
     transform: translateY(0px); }
@@ -846,7 +846,7 @@ h6 {
   /* Black see-through */
   color: #f1f1f1;
   width: 100%;
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   color: white;
   font-size: 20px;
