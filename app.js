@@ -29,6 +29,19 @@ function appearProjectsList() {
   }
 }
 
+function appearAboutSection() {
+  let aboutDescription = document.querySelector('.about-center');
+  let aboutSectionPositionList = aboutDescription.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight/2;
+
+  if(aboutSectionPositionList < screenPosition) {
+    aboutDescription.classList.add('about-appear')
+
+  }else if(aboutSectionPositionList > screenPosition) {
+    aboutDescription.classList.remove('about-appear')
+  }
+}
+
 // let educationButton = document.querySelector('.education-button')
 // let educationBox = document.querySelector('.education-box')
 //
@@ -92,6 +105,7 @@ window.onscroll = function() {
 
 // ################### END NAVBAR-SCROLL-EFFECT ###################
 
+window.addEventListener('scroll', appearAboutSection)
 window.addEventListener('scroll', appearSkillList)
 window.addEventListener('scroll', appearProjectsList)
 
