@@ -11,7 +11,6 @@ function appearSkillList() {
   }else if(introSkillsPositionList > screenPosition) {
     skillsList.classList.remove('skills-appear')
     buttonHome.classList.remove('buttonHome-effect')
-
   }
 }
 
